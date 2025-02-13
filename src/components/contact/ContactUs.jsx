@@ -44,10 +44,10 @@ const ContactUs = (props) => {
         <div className="contactus-info">
           <h3 className="info-heading">Contact Information</h3>
           <p className="info-item">
-            <strong>📍 Address:</strong> 123 Foodies Street, Gourmet City, FL
+            <strong>📍 Address:</strong> 123 Foodies Street, Biharsharif City, FL
           </p>
           <p className="info-item">
-            <strong>📞 Phone:</strong> +1 (555) 123-4567
+            <strong>📞 Phone:</strong> +91 78088-48551
           </p>
           <p className="info-item">
             <strong>📧 Email:</strong> support@foodiesdelight.com
