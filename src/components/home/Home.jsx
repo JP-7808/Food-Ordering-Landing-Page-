@@ -5,6 +5,7 @@ import burger from '../../photos/burger.jpg';
 import sushi from '../../photos/sushi.jpg';
 import pasta from '../../photos/pasta.jpg';
 import desserts from '../../photos/desserts.jpg';
+import Hotel from '../hotels/Hotels';
 
 const categories = ['Pizza', 'Burgers', 'Sushi', 'Pasta', 'Desserts'];
 
@@ -18,28 +19,34 @@ const foods = [
 
 const Home = () => {
   return (
-    <div className="home">
-      <header className="header">
-        <h1>Welcome to Foodie Heaven 🍴</h1>
-        <p>Delicious meals, just a click away!</p>
-      </header>
-      
-      <div className="categories">
-        {categories.map((category) => (
-          <button className="category" key={category}>
-            {category}
-          </button>
-        ))}
+    <div>
+      <div className="home">
+        <header className="header">
+          <h1>Welcome to Foodie Heaven 🍴</h1>
+          <p>Delicious meals, just a click away!</p>
+        </header>
+        
+        <div className="categories">
+          {categories.map((category) => (
+            <button className="category" key={category}>
+              {category}
+            </button>
+          ))}
+        </div>
+        
+        <div className="food-list">
+          {foods.map((food) => (
+            <div className="food-item" key={food.name}>
+              <img src={food.img} alt={food.name} className="food-img" />
+              <h3>{food.name}</h3>
+              <button className="order-button">Order Now</button>
+            </div>
+          ))}
+        </div>
       </div>
-      
-      <div className="food-list">
-        {foods.map((food) => (
-          <div className="food-item" key={food.name}>
-            <img src={food.img} alt={food.name} className="food-img" />
-            <h3>{food.name}</h3>
-            <button className="order-button">Order Now</button>
-          </div>
-        ))}
+      <div class='hotels'>
+        <Hotel/>
+
       </div>
     </div>
   );

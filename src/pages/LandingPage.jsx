@@ -3,6 +3,10 @@ import './landingPage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Home from '../components/home/Home'
+import Services from '../components/services/Services';
+import AboutUs from '../components/aboutUs/AboutUs';
+import ContactUs from '../components/contact/ContactUs';
+import Navbar from '../components/navbar/Navbar';
 
 const LandingPage = () => {
 
@@ -12,9 +16,18 @@ const LandingPage = () => {
 
   return (
     <div>
-      
+      <Navbar/>
       <div id='home' data-aos="fade-in">
         <Home/>
+      </div>
+      <div id='services'>
+        <Services/>
+      </div>
+      <div id='aboutUs'>
+        <AboutUs/>
+      </div>
+      <div id='contact'>
+        <ContactUs/>
       </div>
       
     </div>
