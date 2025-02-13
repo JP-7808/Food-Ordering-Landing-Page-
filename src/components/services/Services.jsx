@@ -28,9 +28,9 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Services = (props) => {
   return (
-    <div className="services-container">
+    <div className="services-container" data-aos={props["data-aos"]} >
       <h2 className="services-heading">Our Services</h2>
       <div className="services-grid">
         {services.map((service) => (

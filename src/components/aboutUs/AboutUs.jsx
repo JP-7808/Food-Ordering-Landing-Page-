@@ -1,10 +1,12 @@
 import React from "react";
 import "./aboutUs.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; 
 import aboutUs from "../../photos/aboutUs.jpg"
 
-const AboutUs = () => {
+const AboutUs = (props) => {
   return (
-    <div className="aboutus-container">
+    <div className="aboutus-container" data-aos={props["data-aos"]} >
       <div className="aboutus-content">
         <h2 className="aboutus-heading">About Us</h2>
         <p className="aboutus-description">
@@ -16,10 +18,11 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="aboutus-image">
-        <img 
+        <LazyLoadImage img 
           src={aboutUs}
           alt="About Us" 
           className="aboutus-img"
+          effect='blur'
         />
       </div>
     </div>

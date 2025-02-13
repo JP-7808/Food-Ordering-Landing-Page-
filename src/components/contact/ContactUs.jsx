@@ -1,9 +1,9 @@
 import React from "react";
 import "./contactUs.css";
 
-const ContactUs = () => {
+const ContactUs = (props) => {
   return (
-    <div className="contactus-container">
+    <div className="contactus-container" data-aos={props["data-aos"]} >
       <h2 className="contactus-heading">Get in Touch</h2>
       <p className="contactus-subheading">
         Have a question or want to share feedback? We'd love to hear from you!

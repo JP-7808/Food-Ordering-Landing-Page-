@@ -20,13 +20,13 @@ const LandingPage = () => {
       <div id='home' data-aos="fade-in">
         <Home/>
       </div>
-      <div id='services'>
+      <div id='services' data-aos="fade-up-right">
         <Services/>
       </div>
-      <div id='aboutUs'>
+      <div id='aboutUs' data-aos="fade-up-left">
         <AboutUs/>
       </div>
-      <div id='contact'>
+      <div id='contact' data-aos="flip-left">
         <ContactUs/>
       </div>
       

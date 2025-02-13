@@ -1,5 +1,7 @@
 import React from 'react';
 import './home.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; 
 import pizza from '../../photos/pizza.jpg';
 import burger from '../../photos/burger.jpg';
 import sushi from '../../photos/sushi.jpg';
@@ -34,10 +36,10 @@ const Home = () => {
           ))}
         </div>
         
-        <div className="food-list">
+        <div className="food-list" >
           {foods.map((food) => (
             <div className="food-item" key={food.name}>
-              <img src={food.img} alt={food.name} className="food-img" />
+              <LazyLoadImage img src={food.img} alt={food.name} className="food-img" effect='blur' />
               <h3>{food.name}</h3>
               <button className="order-button">Order Now</button>
             </div>
